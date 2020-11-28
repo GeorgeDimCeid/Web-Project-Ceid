@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif !important;
+    width: 100vw;
+    overflow: hidden;
+    color: #f16051!important ;
+}
+.col-sm-5 {
+    text-align: center !important;
+}
+
+.text {
+    font-size: 18px;
+    color: #2968aa;
+    
+}
+nav{
+    background-color: #f16051!important;
+    color: white !important ;
+    height: 50px;
+    text-align: center !important;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.row {
+    text-align: center !important;
+}
+button {
+    background-color: #f16051 !important;
+    color: white ;
+    padding: 10px 20px 30px 20px;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+    cursor: pointer;
+    width: 60%;
+}
