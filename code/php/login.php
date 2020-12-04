@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/login-css.css">
-
+  <!-- <script language="javascript" type="text/javascript">  window.history.forward();   </script>   -->
 </head>
 
 <body>
@@ -26,8 +26,8 @@
               <h3 >Σύνδεση Χρήστη</h3>
                 <form>
                   <div class="form-group ">
-                    <label for="email  ">Διεύθυνση Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="usernamee@mail.com" required>
+                    <label for="username  ">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="username" required>
                   </div>
                   <div class="form-group ">
                     <label for="password">Κωδικός Χρήστη</label>
@@ -35,18 +35,20 @@
                   </div>
                   <div class="form-group text-center" id="btnRow">
                     <button type="submit" class="btn btn-primary" id="submitButton">Σύνδεση</button>
-                  </div>
+                    </div>
+                    
+                    </form>
                   <div class="form-group form-text" id="wrongInput" >
             Παρακαλούμε ελέγξτε τα στοιχεία που έχετε εισάγει και προσπαθήστε ξανά!
           </div>
+
                   
           <div id="signupLink">
-          Δεν έχετε ακόμα λογαριασμό; Εγγραφείτε <a href="/signup.php">εδώ</a>.
+          Δεν έχετε ακόμα λογαριασμό; Εγγραφείτε <a href="signup.php">εδώ</a>.
         </div>
 
         </div>
       </div>
-</div>
 </div>
 
 

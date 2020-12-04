@@ -35,7 +35,7 @@ background-color: #f16051!important;
 
 #wrongInput {
     color: red;
-    display: none!important;
+    display: none;
     margin-bottom: 0.5em;
     text-align: center !important;
 }

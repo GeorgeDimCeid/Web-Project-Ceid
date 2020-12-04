@@ -3,10 +3,16 @@ body {
     width: 100vw;
     overflow: hidden;
     color: #f16051!important;
-    width: 100%;
-    height: 100%;
+    
     
 } 
+#loginLink {
+    text-align: center;
+    color: rgb(100, 110, 126);
+    margin-bottom: 0.75em;
+}
+
+
 nav{
     background-color: #f16051!important;
     color: white ;
@@ -27,7 +33,13 @@ color: #f16051!important;
 background-color: #f16051!important;
 
 }
-
+.error_form
+{
+	top: 12px;
+	color: rgb(216, 15, 15);
+    font-size: 0.8rem;
+    font-family: Helvetica;
+}
 
 
 #wrongInput {
@@ -52,22 +64,8 @@ background-color: #f16051!important;
 
   .btn{
 
-    width: 60%;
+    width: 40%;
 
 
   }
 
-  #name{
-    position: absolute;
-    width: 43%;
-    left: 15px;
-    
-
-  }
-
-  #lastname{
-    position: relative;
-    width: 46%;
-    left: 265px;
-
-  }

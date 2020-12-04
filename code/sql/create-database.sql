@@ -5,8 +5,9 @@ CREATE DATABASE hardb;
 
 DROP TABLE IF EXISTS `users` ;
 CREATE TABLE IF NOT EXISTS  `users` (
-  `password` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
+  `username` VARCHAR(255) NOT NULL,
   `type` ENUM('user', 'admin') NOT NULL DEFAULT 'user',
   `firstname` VARCHAR(45) NOT NULL,
   `lastname` VARCHAR(45) NOT NULL,

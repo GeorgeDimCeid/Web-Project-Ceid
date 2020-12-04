@@ -14,11 +14,11 @@ if (!$conn) {
 
 
 
-$name= $_POST['email'] ?? 'default';
+$name= $_POST['username'] ?? 'default';
 
 //$pass= password_hash($_POST["password"],PASSWORD_DEFAULT);
 $pass=$_POST["password"];
-$sql="SELECT  email , password, type FROM users WHERE email  = ?";
+$sql="SELECT   password, type FROM users WHERE username  = ?";
 
 
 $stmt = $conn->prepare($sql);
@@ -30,31 +30,31 @@ $stmt->store_result();
 
 
 if ($stmt->num_rows > 0) {
-    $stmt->bind_result( $email, $password, $type);
-    $use  r=$stmt->fetch();
+    $stmt->bind_result(  $password, $type);
+    $use =$stmt->fetch();
     $stmt->close();
    
     // unique usernames => {1 row fetched => success, 0 rows fetched => wrong input}
-   
-     if ($pass==$password) {
-        header('HTTP/2 200 OK'); 
+    
+     if (password_verify($pass,$password)) {
         header("Content-type: application/json");
 
         if ($type == "user"){
             echo json_encode($type); 
-            $_SESSION['email'] = $name;
+            $_SESSION['usenrame'] = $name;
             $_SESSION['type'] = "user";
          }
         else if ($type == "admin"){
             echo json_encode($type); 
-            $_SESSION["email"] = $name;
+            $_SESSION["username"] = $name;
             $_SESSION["type"] = "admin";
         }
     }
     else {
-        exit();
+        //some code 
+        echo  json_encode(password_verify($pass,$password)); 
     }
-}else 
+}else
 { die("incorrect");
     # code...
 }
